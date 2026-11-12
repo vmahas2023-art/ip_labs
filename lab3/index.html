@@ -1,19 +1,110 @@
 <!doctype html>
 <html lang="uk">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Лабораторна робота №3</title>
-  <link rel="stylesheet" href="../assets/style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Мультимедіа — Лабораторна робота №3</title>
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="stylesheet" href="lab3.css">
 </head>
 <body>
-  <header class="site-header"><div class="container">
-    <p class="eyebrow">Програмування в Internet</p>
-    <h1>Лабораторна робота №3</h1>
-  </div></header>
-  <main class="container single"><article class="panel">
-    <h2>Матеріали роботи</h2><p>Матеріали лабораторної №3 ще не додано до портфоліо.</p>
-    <p><a href="../">Повернутися до списку робіт</a></p>
-  </article></main>
+<a class="skip-link" href="#content">Перейти до вмісту</a>
+<header class="site-header">
+<div class="container">
+<p class="eyebrow">Лабораторна робота №3 · Програмування в Internet</p>
+<h1>IT коледж Львівської політехніки</h1>
+<p>Графічні елементи, відео, аудіо та інтерактивна карта</p>
+</div>
+</header>
+<nav class="container top-nav" aria-label="Основна навігація">
+<a href="../">Головна</a>
+<a href="../lab1/">Лабораторна №1</a>
+<a href="../lab2/">Лабораторна №2</a>
+<a href="./" aria-current="page">Лабораторна №3</a>
+</nav>
+<div class="container multimedia-layout">
+<main id="content">
+<section class="panel logo-panel" aria-label="Логотип коледжу">
+<img class="college-logo" src="media/college-logo.jpg" height="300" width="300" alt="Логотип ІТ коледжу Львівської політехніки">
+</section>
+<section class="panel">
+<p class="eyebrow">Знайомство з коледжем</p>
+<h2>Навчання та студентське життя</h2>
+<p>ІТ коледж Львівської політехніки поєднує вивчення інформаційних технологій із практичними завданнями. На офіційному YouTube-каналі можна переглянути події коледжу, студентські ініціативи й відео про навчання.</p>
+<p>
+<a class="subscribe" href="https://www.youtube.com/@itcollegelviv" target="_blank" rel="noopener noreferrer">Підписатися</a>
+</p>
+<a href="https://itcollege.lviv.ua/" target="_blank" rel="noopener noreferrer">Офіційний сайт коледжу ↗</a>
+</section>
+<section class="panel">
+<h2>Відеопрезентація про навчання</h2>
+<p>Навчальний ролик про вебтехнології, практичні роботи та роботу з Git.</p>
+<video controls preload="metadata" height="540" poster="media/poster.jpg" style="width:80%">
+<source src="media/college-study.mp4" type="video/mp4">Ваш браузер не підтримує відео. <a href="media/college-study.mp4">Завантажити MP4</a>
+</video>
+</section>
+<section class="panel">
+<h2>Аудіо HTML5</h2>
+<p>Короткий звуковий фрагмент для перевірки відтворення, паузи та гучності.</p>
+<audio controls preload="metadata">
+<source src="media/learning-tone.mp3" type="audio/mpeg">Ваш браузер не підтримує аудіо. <a href="media/learning-tone.mp3">Завантажити MP3</a>
+</audio>
+</section>
+<section class="panel" id="youtube">
+<h2>Навчання в коледжі на YouTube</h2>
+<p>Власна відеопрезентація про навчання в ІТ коледжі. Магас Віталій Дмитрович, ІП 41.</p>
+<iframe title="Навчання в ІТ коледжі — Магас Віталій, ІП 41" src="https://www.youtube.com/embed/UADPVgCWT9o" width="640" height="360" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<p class="video-link">
+<a href="https://youtu.be/UADPVgCWT9o" target="_blank" rel="noopener noreferrer">Відкрити відео на YouTube ↗</a>
+</p>
+</section>
+<section class="panel">
+<h2>Музеї та театри Львова</h2>
+<p>Власна карта містить два тематичні шари: п’ять музеїв і п’ять театрів.</p>
+<iframe title="Карта музеїв і театрів Львова" src="https://www.google.com/maps/d/u/2/embed?mid=1gZLdBCTNDzlpzpeq6370mSOLjH68Lbw&amp;ehbc=2E312F" width="640" height="480" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+</iframe>
+</section>
+</main>
+<aside class="panel">
+<p class="eyebrow">На каналі коледжу</p>
+<h2>Рекомендовані відео</h2>
+<ul class="video-list">
+<li>
+<a href="https://www.youtube.com/watch?v=-zCkzxV9hO8" target="_blank" rel="noopener noreferrer">
+<img src="media/preview-1.jpg" alt="Прев’ю: З новим навчальним роком!" width="480" height="360" loading="lazy">
+<span>З новим навчальним роком!</span>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=QIdihNcK5pU" target="_blank" rel="noopener noreferrer">
+<img src="media/preview-2.jpg" alt="Прев’ю: Незалежність — це… Говорить молодь" width="480" height="360" loading="lazy">
+<span>Незалежність — це… Говорить молодь</span>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=3NC1zuyPi-w" target="_blank" rel="noopener noreferrer">
+<img src="media/preview-3.jpg" alt="Прев’ю: Коледж — це не просто пари, це люди." width="480" height="360" loading="lazy">
+<span>Коледж — це не просто пари, це люди.</span>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=umcT2QRNh3U" target="_blank" rel="noopener noreferrer">
+<img src="media/preview-4.jpg" alt="Прев’ю: Цікаві факти про мам." width="480" height="360" loading="lazy">
+<span>Цікаві факти про мам.</span>
+</a>
+</li>
+<li>
+<a href="https://www.youtube.com/watch?v=dUdDE_C5zJo" target="_blank" rel="noopener noreferrer">
+<img src="media/preview-5.jpg" alt="Прев’ю: Студентська рада вітає зі святом любові" width="480" height="360" loading="lazy">
+<span>Студентська рада вітає зі святом любові</span>
+</a>
+</li>
+</ul>
+</aside>
+</div>
+<footer class="container site-footer">
+<p>Магас Віталій Дмитрович · ІП 41 · Лабораторна робота №3</p>
+</footer>
 </body>
 </html>
