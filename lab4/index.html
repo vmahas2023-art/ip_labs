@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Student survey — Laboratory 4 by Mahas Vitalii, IP 41">
+  <title>Student card FORM — Lab 4</title>
+  <link rel="stylesheet" href="form.css">
+  <script src="form.js" defer></script>
+</head>
+<body>
+<header class="wrap">
+  <nav aria-label="Main navigation"><a href="../">Головна</a><a href="../lab1/">Lab1</a><a href="../lab2/">Lab2</a><a href="../lab3/">Lab3</a><a href="./" aria-current="page">Lab4</a></nav>
+  <p class="eyebrow">LABORATORY 4 · INTERNET PROGRAMMING</p>
+  <h1>Student card FORM</h1>
+  <p lang="uk">Анкета студента · Магас Віталій Дмитрович · ІП 41</p>
+</header>
+<main class="wrap">
+  <p class="intro">Complete the student survey. Fields marked * are required.</p>
+  <form id="student-survey" action="./" method="post" enctype="multipart/form-data">
+    <section aria-labelledby="personal-title">
+      <h2 id="personal-title">Personal Information</h2>
+      <fieldset>
+        <legend>Provide your details</legend>
+        <div class="grid">
+          <div class="field"><label for="full-name">Full Name *</label><input id="full-name" name="full_name" type="text" placeholder="Enter your full name" minlength="3" maxlength="100" autocomplete="name" required></div>
+          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" maxlength="254" required></div>
+          <div class="field"><label for="password">Password *</label><input id="password" name="password" type="password" placeholder="Enter a sample password" minlength="8" maxlength="128" autocomplete="new-password" aria-describedby="password-help" required><small id="password-help">At least 8 characters. Use a sample password for this exercise.</small></div>
+          <div class="field"><label for="age">Age *</label><input id="age" name="age" type="number" min="14" max="100" step="1" required></div>
+          <div class="field"><label for="birth-date">Date of Birth *</label><input id="birth-date" name="birth_date" type="date" required></div>
+          <div class="field"><label for="country">Country *</label><select id="country" name="country" required><option value="">Select your country</option><option value="Ukraine">Ukraine</option><option value="Poland">Poland</option><option value="Germany">Germany</option><option value="USA">USA</option><option value="Other">Other</option></select></div>
+        </div>
+        <fieldset class="choices"><legend>Gender *</legend><label><input type="radio" name="gender" value="Male" required> Male</label><label><input type="radio" name="gender" value="Female"> Female</label><label><input type="radio" name="gender" value="Other"> Other</label></fieldset>
+        <fieldset class="choices"><legend>Languages Known</legend><label><input type="checkbox" name="languages" value="English"> English</label><label><input type="checkbox" name="languages" value="Spanish"> Spanish</label><label><input type="checkbox" name="languages" value="French"> French</label></fieldset>
+      </fieldset>
+    </section>
+    <section aria-labelledby="subjects-title">
+      <h2 id="subjects-title">College Subjects</h2>
+      <fieldset>
+        <legend>Select your subjects</legend>
+        <div class="field"><label for="subjects">Choose subjects *</label><select id="subjects" name="subjects" multiple size="5" required aria-describedby="subjects-help"><option value="Mathematics">Mathematics</option><option value="Computer Science">Computer Science</option><option value="Physics">Physics</option><option value="Chemistry">Chemistry</option><option value="English">English</option></select><small id="subjects-help">Choose one or more. On a computer, hold Ctrl or Command to select several.</small></div>
+        <div class="field"><label for="interest">Rate your interest in Computer Science: <output id="interest-value" for="interest">5</output> / 10</label><input id="interest" name="interest" type="range" min="0" max="10" step="1" value="5"></div>
+      </fieldset>
+    </section>
+    <section aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills Assessment</h2>
+      <fieldset>
+        <legend>Assess your skills</legend>
+        <div class="field"><label for="skills">Describe your skills *</label><textarea id="skills" name="skills" rows="4" minlength="10" maxlength="2000" placeholder="List your skills here..." required></textarea></div>
+        <div class="field"><label for="resume">Upload your resume</label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,.txt" aria-describedby="resume-help"><small id="resume-help">PDF, DOC, DOCX or TXT. Maximum size: 5 MB.</small></div>
+        <div class="grid"><div class="field"><label for="favorite-color">Pick your favorite color</label><input id="favorite-color" name="favorite_color" type="color" value="#1e6075"></div><div class="field"><label for="study-time">Preferred study time</label><input id="study-time" name="study_time" type="time"></div></div>
+        <p class="note">This exercise previews your answers in this browser. Nothing is sent to a server or saved after reloading.</p>
+        <input class="submit" type="submit" value="Submit Survey">
+        <noscript><p>Enable JavaScript to preview this survey. Server processing is not configured.</p></noscript>
+      </fieldset>
+    </section>
+  </form>
+  <section id="result" hidden aria-labelledby="result-title" tabindex="-1">
+    <h2 id="result-title">Survey preview</h2>
+    <p role="status">Validation passed. Preview created locally; no data or files were sent.</p>
+    <dl id="answers"></dl>
+  </section>
+</main>
+<footer class="wrap"><p>© 2026 Student card by Магас Віталій Дмитрович · ІП 41. All rights reserved.</p></footer>
+</body>
+</html>
