@@ -39,6 +39,12 @@ form.addEventListener("submit", event => {
 
 // Повідомлення вбудованої перевірки українською мовою.
 const clearError = event => {
+  if (event.target.type === "radio") {
+    form.querySelectorAll('input[type="radio"]').forEach(field => {
+      if (field.name === event.target.name) field.setCustomValidity("");
+    });
+    return;
+  }
   if (event.target !== resume && typeof event.target.setCustomValidity === "function") {
     event.target.setCustomValidity("");
   }
