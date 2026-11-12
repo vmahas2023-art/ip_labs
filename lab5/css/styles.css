@@ -1,0 +1,63 @@
+/* Шрифт і значення відтворено за обчисленими стилями lpnu.ua. */
+@font-face {
+  font-family: "Roboto Condensed"; font-style: normal; font-weight: 400;
+  src: url("../assets/roboto-condensed-400.ttf") format("truetype"); font-display: swap;
+}
+@font-face {
+  font-family: "Roboto Condensed"; font-style: normal; font-weight: 700;
+  src: url("../assets/roboto-condensed-700.ttf") format("truetype"); font-display: swap;
+}
+html { font-size: 10px; }
+body { margin: 0; color: #333; background-color: #fff; font: 16px/1.42857143 "Roboto Condensed", sans-serif; }
+*, *::before, *::after { box-sizing: border-box; }
+a { color: #0076a8; text-decoration: none; }
+a:hover, a:focus { color: #00405c; text-decoration: underline; }
+a:focus-visible { outline: 3px solid #00a1e4; outline-offset: 4px; }
+/* Допоміжні блоки навчальної сторінки. */
+.lab-nav, .lab-intro, .lab-footer { max-width: 1170px; margin: 0 auto; padding: 18px 15px; }
+.lab-nav { display: flex; flex-wrap: wrap; gap: 12px 22px; border-bottom: 1px solid #ddd; }
+.lab-nav [aria-current="page"] { font-weight: 700; }
+.lab-intro { padding-top: 22px; padding-bottom: 22px; }
+.lab-intro h1 { font-size: 28px; font-weight: 500; line-height: 1.1; margin: 8px 0 14px; }
+.lab-intro p { margin: 8px 0; }
+.eyebrow, .lab-footer { font-size: 14px; }
+/* Оригінальна блочна модель контейнера та сітки Bootstrap. */
+#events_container { background-color: #252775; padding: 30px 0 0; }
+#events_container .container { margin: 0 auto; padding: 0 15px; }
+#events_container .row { margin: 0 -15px; }
+#events_container .clearfix::before, #events_container .clearfix::after,
+#events_container .container::before, #events_container .container::after,
+#events_container .row::before, #events_container .row::after { content: " "; display: table; }
+#events_container .clearfix::after, #events_container .container::after,
+#events_container .row::after { clear: both; }
+#events_container .views-col { position: relative; float: left; width: 50%; padding: 0 15px; margin-bottom: 30px; min-height: 1px; }
+#events_container .col-3, #events_container .col-5 { clear: left; }
+#events_container .views-field { background-color: #fff; }
+#events_container h2 { font-size: 20px; font-weight: 500; line-height: 1.1; margin: 0 0 30px; text-align: center; }
+#events_container h2 a:link, #events_container h2 a:visited { color: #fff; border-bottom: 2px solid #fff; transition: color 2s ease-out, border-bottom 2s ease-out; }
+#events_container h2 a:hover, #events_container h2 a:active { color: #00a1e4; border-bottom-color: #00a1e4; text-decoration: none; }
+#events_container .img-responsive { display: block; max-width: 100%; height: auto; border: 0; }
+#events_container a:link img, #events_container a:visited img { opacity: .85; transition: opacity 2s ease-out; }
+#events_container a:hover img, #events_container a:active img { opacity: 1; }
+#events_container .event_date { padding: 15px; text-align: center; border-bottom: 1px dotted #777; }
+#events_container h3 { padding: 15px; margin: 0; font-size: 18px; font-weight: 500; line-height: 1.1; background-color: #f6f6f6; }
+@media (min-width: 480px) {
+  #events_container h2 { font-size: 24px; }
+}
+@media (min-width: 768px) {
+  #events_container .container { width: 750px; }
+  #events_container .views-col { width: 33.33333333%; }
+  #events_container h2 { margin: 15px 0 30px; }
+  #events_container .col-3, #events_container .col-5 { clear: none; }
+  #events_container .col-4 { clear: left; }
+}
+@media (min-width: 992px) {
+  #events_container .container { width: 970px; }
+  #events_container { padding: 30px 0; }
+}
+@media (min-width: 1200px) {
+  #events_container .container { width: 1170px; }
+  #events_container .views-col { width: 16.66666667%; }
+  #events_container h2 { font-size: 28px; }
+  #events_container .col-4 { clear: none; }
+}
