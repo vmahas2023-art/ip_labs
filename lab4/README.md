@@ -7,3 +7,5 @@
 
 Сайт: https://capable-frangollo-7ab6b0.netlify.app/lab4/
 GitHub Pages: https://vmahas2023-art.github.io/ip_labs/lab4/
+
+Інтерфейс анкети, підказки, результати та повідомлення валідації перекладено українською мовою.

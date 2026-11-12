@@ -1,66 +1,66 @@
 <!doctype html>
-<html lang="en">
+<html lang="uk">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Student survey — Laboratory 4 by Mahas Vitalii, IP 41">
-  <title>Student card FORM — Lab 4</title>
+  <meta name="description" content="Анкета студента — лабораторна робота №4. Магас Віталій Дмитрович, ІП 41">
+  <title>Анкета студента — лабораторна №4</title>
   <link rel="stylesheet" href="form.css">
   <script src="form.js" defer></script>
 </head>
 <body>
 <header class="wrap">
-  <nav aria-label="Main navigation"><a href="../">Головна</a><a href="../lab1/">Lab1</a><a href="../lab2/">Lab2</a><a href="../lab3/">Lab3</a><a href="./" aria-current="page">Lab4</a></nav>
-  <p class="eyebrow">LABORATORY 4 · INTERNET PROGRAMMING</p>
-  <h1>Student card FORM</h1>
+  <nav aria-label="Головна навігація"><a href="../">Головна</a><a href="../lab1/">Лабораторна №1</a><a href="../lab2/">Лабораторна №2</a><a href="../lab3/">Лабораторна №3</a><a href="./" aria-current="page">Лабораторна №4</a></nav>
+  <p class="eyebrow">ЛАБОРАТОРНА РОБОТА №4 · ПРОГРАМУВАННЯ В INTERNET</p>
+  <h1>Анкета студента</h1>
   <p lang="uk">Анкета студента · Магас Віталій Дмитрович · ІП 41</p>
 </header>
 <main class="wrap">
-  <p class="intro">Complete the student survey. Fields marked * are required.</p>
+  <p class="intro">Заповніть анкету студента. Поля, позначені *, обов’язкові.</p>
   <form id="student-survey" action="./" method="post" enctype="multipart/form-data">
     <section aria-labelledby="personal-title">
-      <h2 id="personal-title">Personal Information</h2>
+      <h2 id="personal-title">Особисті відомості</h2>
       <fieldset>
-        <legend>Provide your details</legend>
+        <legend>Вкажіть свої дані</legend>
         <div class="grid">
-          <div class="field"><label for="full-name">Full Name *</label><input id="full-name" name="full_name" type="text" placeholder="Enter your full name" minlength="3" maxlength="100" autocomplete="name" required></div>
-          <div class="field"><label for="email">Email *</label><input id="email" name="email" type="email" placeholder="Enter your email" autocomplete="email" maxlength="254" required></div>
-          <div class="field"><label for="password">Password *</label><input id="password" name="password" type="password" placeholder="Enter a sample password" minlength="8" maxlength="128" autocomplete="new-password" aria-describedby="password-help" required><small id="password-help">At least 8 characters. Use a sample password for this exercise.</small></div>
-          <div class="field"><label for="age">Age *</label><input id="age" name="age" type="number" min="14" max="100" step="1" required></div>
-          <div class="field"><label for="birth-date">Date of Birth *</label><input id="birth-date" name="birth_date" type="date" required></div>
-          <div class="field"><label for="country">Country *</label><select id="country" name="country" required><option value="">Select your country</option><option value="Ukraine">Ukraine</option><option value="Poland">Poland</option><option value="Germany">Germany</option><option value="USA">USA</option><option value="Other">Other</option></select></div>
+          <div class="field"><label for="full-name">Прізвище, ім’я та по батькові *</label><input id="full-name" name="full_name" type="text" placeholder="Введіть своє ПІБ" minlength="3" maxlength="100" autocomplete="name" required></div>
+          <div class="field"><label for="email">Електронна пошта *</label><input id="email" name="email" type="email" placeholder="Введіть адресу електронної пошти" autocomplete="email" maxlength="254" required></div>
+          <div class="field"><label for="password">Пароль *</label><input id="password" name="password" type="password" placeholder="Введіть навчальний пароль" minlength="8" maxlength="128" autocomplete="new-password" aria-describedby="password-help" required><small id="password-help">Щонайменше 8 символів. Для цієї вправи використовуйте навчальний пароль.</small></div>
+          <div class="field"><label for="age">Вік *</label><input id="age" name="age" type="number" min="14" max="100" step="1" required></div>
+          <div class="field"><label for="birth-date">Дата народження *</label><input id="birth-date" name="birth_date" type="date" required></div>
+          <div class="field"><label for="country">Країна *</label><select id="country" name="country" required><option value="">Оберіть країну</option><option value="Україна">Україна</option><option value="Польща">Польща</option><option value="Німеччина">Німеччина</option><option value="США">США</option><option value="Інше">Інше</option></select></div>
         </div>
-        <fieldset class="choices"><legend>Gender *</legend><label><input type="radio" name="gender" value="Male" required> Male</label><label><input type="radio" name="gender" value="Female"> Female</label><label><input type="radio" name="gender" value="Other"> Other</label></fieldset>
-        <fieldset class="choices"><legend>Languages Known</legend><label><input type="checkbox" name="languages" value="English"> English</label><label><input type="checkbox" name="languages" value="Spanish"> Spanish</label><label><input type="checkbox" name="languages" value="French"> French</label></fieldset>
+        <fieldset class="choices"><legend>Стать *</legend><label><input type="radio" name="gender" value="Чоловіча" required> Чоловіча</label><label><input type="radio" name="gender" value="Жіноча"> Жіноча</label><label><input type="radio" name="gender" value="Інше"> Інше</label></fieldset>
+        <fieldset class="choices"><legend>Знання мов</legend><label><input type="checkbox" name="languages" value="Англійська"> Англійська</label><label><input type="checkbox" name="languages" value="Іспанська"> Іспанська</label><label><input type="checkbox" name="languages" value="Французька"> Французька</label></fieldset>
       </fieldset>
     </section>
     <section aria-labelledby="subjects-title">
-      <h2 id="subjects-title">College Subjects</h2>
+      <h2 id="subjects-title">Навчальні дисципліни</h2>
       <fieldset>
-        <legend>Select your subjects</legend>
-        <div class="field"><label for="subjects">Choose subjects *</label><select id="subjects" name="subjects" multiple size="5" required aria-describedby="subjects-help"><option value="Mathematics">Mathematics</option><option value="Computer Science">Computer Science</option><option value="Physics">Physics</option><option value="Chemistry">Chemistry</option><option value="English">English</option></select><small id="subjects-help">Choose one or more. On a computer, hold Ctrl or Command to select several.</small></div>
-        <div class="field"><label for="interest">Rate your interest in Computer Science: <output id="interest-value" for="interest">5</output> / 10</label><input id="interest" name="interest" type="range" min="0" max="10" step="1" value="5"></div>
+        <legend>Оберіть дисципліни</legend>
+        <div class="field"><label for="subjects">Навчальні дисципліни *</label><select id="subjects" name="subjects" multiple size="5" required aria-describedby="subjects-help"><option value="Математика">Математика</option><option value="Інформатика">Інформатика</option><option value="Фізика">Фізика</option><option value="Хімія">Хімія</option><option value="Англійська">Англійська</option></select><small id="subjects-help">Оберіть одну або кілька дисциплін. На комп’ютері утримуйте Ctrl або Command для вибору кількох.</small></div>
+        <div class="field"><label for="interest">Оцініть свій інтерес до інформатики: <output id="interest-value" for="interest">5</output> / 10</label><input id="interest" name="interest" type="range" min="0" max="10" step="1" value="5"></div>
       </fieldset>
     </section>
     <section aria-labelledby="skills-title">
-      <h2 id="skills-title">Skills Assessment</h2>
+      <h2 id="skills-title">Оцінювання навичок</h2>
       <fieldset>
-        <legend>Assess your skills</legend>
-        <div class="field"><label for="skills">Describe your skills *</label><textarea id="skills" name="skills" rows="4" minlength="10" maxlength="2000" placeholder="List your skills here..." required></textarea></div>
-        <div class="field"><label for="resume">Upload your resume</label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,.txt" aria-describedby="resume-help"><small id="resume-help">PDF, DOC, DOCX or TXT. Maximum size: 5 MB.</small></div>
-        <div class="grid"><div class="field"><label for="favorite-color">Pick your favorite color</label><input id="favorite-color" name="favorite_color" type="color" value="#1e6075"></div><div class="field"><label for="study-time">Preferred study time</label><input id="study-time" name="study_time" type="time"></div></div>
-        <p class="note">This exercise previews your answers in this browser. Nothing is sent to a server or saved after reloading.</p>
-        <input class="submit" type="submit" value="Submit Survey">
-        <noscript><p>Enable JavaScript to preview this survey. Server processing is not configured.</p></noscript>
+        <legend>Розкажіть про свої навички</legend>
+        <div class="field"><label for="skills">Опишіть свої навички *</label><textarea id="skills" name="skills" rows="4" minlength="10" maxlength="2000" placeholder="Перелічіть свої навички..." required></textarea></div>
+        <div class="field"><label for="resume">Додайте резюме</label><input id="resume" name="resume" type="file" accept=".pdf,.doc,.docx,.txt" aria-describedby="resume-help"><small id="resume-help">Формати: PDF, DOC, DOCX або TXT. Максимальний розмір — 5 МБ.</small></div>
+        <div class="grid"><div class="field"><label for="favorite-color">Оберіть улюблений колір</label><input id="favorite-color" name="favorite_color" type="color" value="#1e6075"></div><div class="field"><label for="study-time">Зручний час для навчання</label><input id="study-time" name="study_time" type="time"></div></div>
+        <p class="note">Відповіді відображаються лише в цьому браузері. Дані не надсилаються на сервер і не зберігаються після перезавантаження.</p>
+        <input class="submit" type="submit" value="Переглянути анкету">
+        <noscript><p>Увімкніть JavaScript для перегляду анкети. Серверне опрацювання не налаштовано.</p></noscript>
       </fieldset>
     </section>
   </form>
   <section id="result" hidden aria-labelledby="result-title" tabindex="-1">
-    <h2 id="result-title">Survey preview</h2>
-    <p role="status">Validation passed. Preview created locally; no data or files were sent.</p>
+    <h2 id="result-title">Попередній перегляд анкети</h2>
+    <p role="status">Перевірку пройдено. Анкету сформовано в браузері; дані та файли не надсилалися.</p>
     <dl id="answers"></dl>
   </section>
 </main>
-<footer class="wrap"><p>© 2026 Student card by Магас Віталій Дмитрович · ІП 41. All rights reserved.</p></footer>
+<footer class="wrap"><p>© 2026 Анкета студента. Автор: Магас Віталій Дмитрович · ІП 41. Усі права захищено.</p></footer>
 </body>
 </html>
