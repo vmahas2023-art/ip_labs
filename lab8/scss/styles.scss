@@ -1,0 +1,142 @@
+@use "sass:map";
+
+// Кольори та типографіка сторінки лабораторної роботи № 7.
+$primary-color: #252775;
+$secondary-color: #006e99;
+$text-color: #174865;
+$surface-color: #f6f6f6;
+$hover-color: #daedf5;
+$date-color: #545454;
+$font-size-base: 18px;
+$font-size-card: 19px;
+$font-size-title: 2em;
+$font-size-section: 1.5em;
+$font-size-small: 0.833333em;
+$content-width: 1170px;
+$card-gap: 24px;
+
+$breakpoints: (
+  mobile: 576px,
+  tablet: 768px,
+  desktop: 1024px
+);
+
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media (min-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error "Невідомий breakpoint: #{$breakpoint}";
+  }
+}
+
+@font-face {
+  font-family: Condensed;
+  src: url("../assets/roboto-condensed-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Condensed;
+  src: url("../assets/roboto-condensed-700.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font: $font-size-base Condensed, sans-serif;
+  color: $text-color;
+}
+
+nav, main, section, footer {
+  max-width: $content-width;
+  margin: auto;
+  padding: 20px 15px;
+
+  @include respond-to(mobile) {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+a {
+  color: inherit;
+  &:focus-visible { outline: 3px solid $secondary-color; outline-offset: 3px; }
+}
+
+header {
+  background: $primary-color;
+  color: white;
+
+  section {
+    h1 { font-size: $font-size-title; }
+    .events {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      article {
+        flex: 0 0 calc((100% - (var(--count) - 1) * #{$card-gap}) / var(--count));
+      }
+    }
+  }
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 400;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.events, .news {
+  --count: 1;
+  gap: $card-gap;
+  align-items: start;
+
+  @include respond-to(tablet) { --count: 2; }
+  @include respond-to(desktop) { --count: 4; }
+}
+
+main.main-container {
+  h2 { font-size: $font-size-section; }
+  .news {
+    display: grid;
+    grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+  }
+}
+
+article {
+  min-width: 0;
+  background: $surface-color;
+  color: $secondary-color;
+
+  img { display: block; width: 100%; height: auto; }
+  small {
+    display: inline-block;
+    margin: -8px 12px 0;
+    position: relative;
+    padding: 4px 7px;
+    font-size: $font-size-small;
+    color: white;
+    background: $date-color;
+  }
+  h3 {
+    margin: 0;
+    padding: 14px;
+    font-size: $font-size-card;
+    overflow-wrap: anywhere;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    transition: background-color 180ms;
+
+    &:hover, &:focus-visible { background-color: $hover-color; }
+  }
+}

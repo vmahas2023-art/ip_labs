@@ -1,0 +1,10 @@
+{
+  "name": "ip-labs-mahas",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build:lab8": "sass --source-map --embed-sources lab8/scss:lab8/css",
+    "watch:lab8": "sass --watch lab8/scss:lab8/css"
+  },
+  "devDependencies": { "sass": "^1.97.0" }
+}
