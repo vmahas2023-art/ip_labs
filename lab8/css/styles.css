@@ -1,0 +1,124 @@
+@font-face {
+  font-family: Condensed;
+  src: url("../assets/roboto-condensed-400.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: Condensed;
+  src: url("../assets/roboto-condensed-700.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font: 18px Condensed, sans-serif;
+  color: #174865;
+}
+
+nav, main, section, footer {
+  max-width: 1170px;
+  margin: auto;
+  padding: 20px 15px;
+}
+@media (min-width: 576px) {
+  nav, main, section, footer {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+a {
+  color: inherit;
+}
+a:focus-visible {
+  outline: 3px solid #006e99;
+  outline-offset: 3px;
+}
+
+header {
+  background: #252775;
+  color: white;
+}
+header section h1 {
+  font-size: 2em;
+}
+header section .events {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+header section .events article {
+  flex: 0 0 calc((100% - (var(--count) - 1) * 24px) / var(--count));
+}
+
+h1, h2 {
+  text-align: center;
+  font-weight: 400;
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.events, .news {
+  --count: 1;
+  gap: 24px;
+  align-items: start;
+}
+@media (min-width: 768px) {
+  .events, .news {
+    --count: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .events, .news {
+    --count: 4;
+  }
+}
+
+main.main-container h2 {
+  font-size: 1.5em;
+}
+main.main-container .news {
+  display: grid;
+  grid-template-columns: repeat(var(--count), minmax(0, 1fr));
+}
+
+article {
+  min-width: 0;
+  background: #f6f6f6;
+  color: #006e99;
+}
+article img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+article small {
+  display: inline-block;
+  margin: -8px 12px 0;
+  position: relative;
+  padding: 4px 7px;
+  font-size: 0.833333em;
+  color: white;
+  background: #545454;
+}
+article h3 {
+  margin: 0;
+  padding: 14px;
+  font-size: 19px;
+  overflow-wrap: anywhere;
+}
+article a {
+  display: block;
+  text-decoration: none;
+  transition: background-color 180ms;
+}
+article a:hover, article a:focus-visible {
+  background-color: #daedf5;
+}
+
+/*# sourceMappingURL=styles.css.map */
